@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 1,
+        "fields": {
+            "watched": true,
+            "title": "Love, Rosie",
+            "rating": 5,
+            "release_date": "Oct. 22, 2014",
+            "review": "Finds the perfect balance between heartbreak and comedy. It is very easy to identify with the main characters whose chemistry truly makes the entire movie. A personal favorite from the very first watch."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 2,
+        "fields": {
+            "watched": true,
+            "title": "Senior Year",
+            "rating": 4.0,
+            "release_date": "May 13, 2022",
+            "review": "Reaches the highest of comedic highs, but loses a bit of its flair towards the end. Otherwise an enjoyable movie that will keep you entertained the whole way through."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 3,
+        "fields": {
+            "watched": true,
+            "title": "Good Will Hunting",
+            "rating": 4.8,
+            "release_date": "Dec. 5, 1997",
+            "review": "Near-perfect cinema. Hooks you in the beginning, keeps you tense in the middle, and provides you with the most perfect, satisfactory ending possible."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 4,
+        "fields": {
+            "watched": true,
+            "title": "Fractured",
+            "rating": 4.1,
+            "release_date": "Sept. 22, 2019",
+            "review": "A psychological thriller that toys with the viewers' emotions and logic. We are constantly forced to judge the main character, but unable to make a definite conclusion until the very end."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 5,
+        "fields": {
+            "watched": false,
+            "title": "The Da Vinci Code",
+            "rating": 0.0,
+            "release_date": "May 19, 2006",
+            "review": "-"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 6,
+        "fields": {
+            "watched": true,
+            "title": "Twilight",
+            "rating": 3.5,
+            "release_date": "Dec. 3, 2008",
+            "review": "Not the greatest piece of cinema. Still an enjoyable film for a nostalgic night."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 7,
+        "fields": {
+            "watched": true,
+            "title": "Step Up 2: The Streets",
+            "rating": 4.3,
+            "release_date": "Feb. 14, 2008",
+            "review": "One of the most beloved franchise sequels ever, and for good reason."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 8,
+        "fields": {
+            "watched": false,
+            "title": "Unbroken",
+            "rating": 0.0,
+            "release_date": "Dec. 25, 2014",
+            "review": "-"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 9,
+        "fields": {
+            "watched": true,
+            "title": "Hacksaw Ridge",
+            "rating": 5.0,
+            "release_date": "Nov. 4, 2016",
+            "review": "A brilliant film about a brilliant person. From start to finish it is heartwarming and touching. Shedding a tear or two is not unexpected."
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 10,
+        "fields": {
+            "watched": false,
+            "title": "Spencer",
+            "rating": 0.0,
+            "release_date": "Nov. 5, 2021",
+            "review": "-"
+        }
+    }
+]
