@@ -1,62 +1,38 @@
-# Template Proyek Django PBP
+# Assignment 3
 
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+Heroku Link: https://pbp-nicole-assignment3.herokuapp.com/mywatchlist/
 
-*Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
+1. Explain the difference between JSON, XML, and HTML!
 
-## Pendahuluan
+HyperText Markup Language (HTML) is a formatting language built for the web. It provides structure to content so that it'll be displayed in an organized manner. It is typically written in pairs of tags that denote how a certain piece of information will be displayed. For example, the <p></p> tags denote paragraph text.
 
-Repositori ini merupakan sebuah template yang dirancang untuk membantu mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform (CSGE602022) mengetahui struktur sebuah proyek aplikasi Django serta file dan konfigurasi yang penting dalam berjalannya aplikasi. Kamu dapat dengan bebas menyalin isi dari repositori ini atau memanfaatkan repositori ini sebagai pembelajaran sekaligus awalan dalam membuat sebuah proyek Django.
+eXtensible Markup Language (XML), similar to HTML, is a markup language, and is written in pairs of tags. However, it is considered to be dynamic, because its main priority is transporting the data, as opposed to displaying it (the way HTML does).
 
-## Cara Menggunakan
+JavaScript Object Notation (JSON) utilizes the same code used for creating JavaScript objects, which make it easy to convert said JSON data to objects. Though the syntax comes from JavaScript, the format is text-only, meaning that both programs used to generate and read JSON data can be coded in any language.
 
-Apabila kamu ingin menggunakan repositori ini sebagai repositori awalan yang nantinya akan kamu modifikasi:
 
-1. Buka laman GitHub repositori templat kode, lalu klik tombol "**Use this template**"
-   untuk membuat salinan repositori ke dalam akun GitHub milikmu.
-2. Buka laman GitHub repositori yang dibuat dari templat, lalu gunakan perintah
-   `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem
-   berkas (_filesystem_) komputermu:
+2. Explain why we need the data delivery when implementing on a platform!
 
-   ```shell
-   git clone <URL ke repositori di GitHub> <path ke suatu lokasi di filesystem>
-   ```
-3. Masuk ke dalam repositori yang sudah di-_clone_ dan jalankan perintah berikut
-   untuk menyalakan _virtual environment_:
+Data delivery is essentially the way a client and server communicate with one another. The client requests data, and the server responds with data. For example, if the client (browser) requests an HTML page, then the server will respond with an HTML file. If the client (browser) requests raw data, the server will respond with an XML or JSON file.
 
-   ```shell
-   python -m venv env
-   ```
-4. Nyalakan environment dengan perintah berikut:
+Data delivery allows for this interaction to happen. Without data delivery, the platform would be one-sided and would not allow for productive communication between parties.
 
-   ```shell
-   # Windows
-   .\env\Scripts\activate
-   # Linux/Unix, e.g. Ubuntu, MacOS
-   source env/bin/activate
-   ```
-5. Install dependencies yang dibutuhkan untuk menjalankan aplikasi dengan perintah berikut:
 
-   ```shell
-   pip install -r requirements.txt
-   ```
+3. Explain how you completed the tasks in this assignment!
 
-6. Jalankan aplikasi Django menggunakan server pengembangan yang berjalan secara
-   lokal:
+First off, I started by creating a new app and initializing that app in the django project settings. I also added the URL path so the user can access it. Then, I built the model that contains the required attributes.
 
-   ```shell
-   python manage.py runserver
-   ```
-7. Bukalah `http://localhost:8000` pada browser favoritmu untuk melihat apakah aplikasi sudah berjalan dengan benar.
+After doing so, I migrated the models and created a views function that would be able to convert it to HTML format. I also created a JSON file with the raw data as well as an HTML template.
 
-## Contoh Deployment 
+Then, I modified the views function accordingly, and also added more functions to allow the data to be displayed in XML and JSON format. After that, I implemented URL routing so each of this formats can be accessed by the user.
 
-Pada template ini, deployment dilakukan dengan memanfaatkan GitHub Actions sebagai _runner_ dan Heroku sebagai platform Hosting aplikasi. 
+Finally, I deployed the app to Heroku.
 
-Untuk melakukan deployment, kamu dapat melihat instruksi yang ada pada [Tutorial 0](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-0).
+---
+## Postman screenshots
+![](html_response.png)
+![](xml_response.png)
+![](json_response.png)
 
-Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://django-pbp-template.herokuapp.com/](https://django-pbp-template.herokuapp.com/)
-
-## Credits
-
-Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya.
+Sources:
+https://www.geeksforgeeks.org/html-vs-xml/
