@@ -36,3 +36,35 @@ Finally, I deployed the app to Heroku.
 
 Sources:
 https://www.geeksforgeeks.org/html-vs-xml/
+
+
+# Assignment 4
+
+Heroku Link: https://pbp-nicole-assignment3.herokuapp.com/todolist
+
+1.  What does {% csrf_token %} do in the <form> element? What happens if there is no such "code snippet" in the <form> element?
+  
+  The csrf_token template tag is a protection of sorts from Cross Site Request Forgeries (CSRF). It protects any information submitted through forms via POST. If there is no CSRF token, then there is no way to authenticate credentials, and anyone with malicious intent could take advantage of unsuspecting users (in other words, they could conduct forgery).
+
+
+2. Can we create the <form> element manually (without using a generator like {{ form.as_table }})? Explain generally how to create <form> manually.
+  
+  We can. However, we'd need to create tags for each field. Typically, we'd need to specify its input type, the label or name, its value, and more. However, this isn't very effective for making forms with a larger number of fields, as it may get repetitive, or when a more complex field is needed.
+
+
+3. Describe the data flow process from the submission made by the user through the HTML form, data storage in the database, until the appearance of the data that has been stored in the HTML template.
+  
+  When the user enters information into the form, the entries are used as arguments that are handled by views.py, and the data is stored in the models. Then, depending on the code, the server sends another HTML page as a result. In this case, once the data is entered and stored, it is displayed back to the user.
+  
+
+4. Explain how you implement the checklist above.
+  
+  First, I ran a virtual environment and created a new Django app. Then, I handled the URL routing by adding the required paths to urls.py (both in project_django and in todolist).
+  
+  Once I did so, I created a Task model with the required attributes. I used models.ForeignKey as the field for user, DateTimeField() for date, CharField() for title, and TextField() for description.
+  
+  Then, I edited views.py and urls.py to accommodate the registration, login, and logout forms. I also edited the HTML templates to ensure that these were functioning correctly.
+  
+  I then created a new function that would create a new Task object whenever the user inputted information in the create-task form. By doing so, I essentially saved the data and displayed it back to the user afterwards. I also created the form page in HTML to ensure it achieved what I wanted. Once done, I added the new URL to the path as well.
+  
+  Lastly, I deployed to Heroku and created tester accounts.
