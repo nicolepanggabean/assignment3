@@ -1,29 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h5>{{username}} To-Do List</h5>
+<div class="lcard">
+    <div class="register">
+        <h3>{{username}} To-Do List</h3>
 
-<table>
-    <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th>Description</th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
-    {% for item in list_item %}
-    <tr>
-        <th>{{item.title}}</th>
-        <th>{{item.date}}</th>
-        <th>{{item.description}}</th>
-    </tr>
-{% endfor %}
-</table>
+        <div class="icard">
+        {% for item in list_item %}
+            <div class="item">
+                <h5>{{item.title}}</h5>
+                <h6>{{item.date}}</h6>
+                <p>{{item.description}}</p>
+            </div>
+        {% endfor %}
+        </div>
 
-<button><a href="{% url 'todolist:new_task' %}">Create New Task</a></button>
+        <div class="lbutton">
+            <button class="button lbutton1"><a class="a link" href="{% url 'todolist:new_task' %}">Create New Task</a></button>
 
-<br>
-<br>
-
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-
+            <button class="button lbutton1"><a class="a link" href="{% url 'todolist:logout' %}">Logout</a></button>
+        </div>
+    </div>
+</div>
 {% endblock content %}

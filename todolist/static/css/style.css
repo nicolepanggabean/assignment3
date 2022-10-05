@@ -1,0 +1,162 @@
+html, body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.lcard {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #17183B;
+}
+
+.login {
+    margin: auto;
+    width: 50%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.login:hover {
+    box-shadow: 0 0 50px 10px #2e3c66;
+}
+
+form {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+}
+
+.linfo {
+    padding: 5px;
+}
+
+input.form-control {
+	border: none;
+	border-bottom: 2px solid #5a7496;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	transition: .2s;
+}
+
+input.form-control:hover {
+    background-color: #dde2eb;
+    border-bottom: 2px solid #17183B;
+}
+
+.lbutton {
+    padding: 10px;
+}
+
+input.login_btn {
+    border: 2px solid #2e3c66;
+    font-weight: 700;
+}
+
+input.login_btn:hover {
+    background-color: #EF626C;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.lbutton1 {
+    padding: 10px;
+    border: 2px solid #2e3c66;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.lbutton1:hover {
+    border: 2px solid #EF626C;
+    background-color: #EF626C;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.acc {
+    font-style: italic;
+    color: #5a7496;
+    padding-top: 10px;
+}
+
+h1 {
+    font-variant: small-caps;
+    color: #17183B;
+}
+
+.register {
+    margin: auto;
+    width: 75%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.register:hover {
+    box-shadow: 0 0 50px 10px #2e3c66;
+}
+
+h3 {
+    font-variant: small-caps;
+    color: #17183B;
+}
+
+.link {
+    font-weight: 700;
+    color: #17183B;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #FFFFFF;
+}
+
+.icard {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 10px;
+}
+
+.item {
+    margin: auto;
+    width: 30%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.item:hover {
+    background-color: #dde2eb;
+}
+
+.cracc {
+    color: #EF626C;
+}
+
+.cracc:hover {
+    color: #BEB8EB;
+}
