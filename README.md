@@ -68,3 +68,65 @@ Heroku Link: https://pbp-nicole-assignment3.herokuapp.com/todolist
   I then created a new function that would create a new Task object whenever the user inputted information in the create-task form. By doing so, I essentially saved the data and displayed it back to the user afterwards. I also created the form page in HTML to ensure it achieved what I wanted. Once done, I added the new URL to the path as well.
   
   Lastly, I deployed to Heroku and created tester accounts.
+  
+  
+# Assignment 5
+
+1. What is the difference between inline, internal, and external CSS? What are the advantages and disadvantages of each style?
+
+  Inline CSS is directly applying the CSS code in our HTML. This means that a "style" argument is added to the HTML tags that need to be stylized. This means that the CSS is not applied to the entire document, but just to whatever tags it is added to.
+  
+  Internal CSS refers to the process of adding "<style></style>" tags within the HTML document and writing the CSS directly there. Anything written between these tags would apply to the entire document accordingly.
+  
+  External CSS is the process of creating a completely separate CSS file and then importing it to the HTML file. To import, the "<link>" tag must be used in the HTML file.
+  
+  When all three are used to stylize a single HTML doc, inline CSS has the highest priority, which means there's more flexibility. It can override any internal or external CSS styles. This is most advantageous when wanting to stylize a minimal number of tags.
+  
+  Since internal CSS is applied to the whole document, it may be useful when wanting to customize shorter HTML docs. If the HTML doc itself is long and utilizes many div classes, it may cause the doc to be too crowded.
+  
+  External CSS is best used when the HTML doc is long and uses many tags. This means that the HTML file would only need a single <link> tag to import the external CSS stylization.
+
+
+2. Describe the HTML5 tags that you know
+
+<!DOCTYPE> a declaration of the document type
+<html> the root of the html document
+<head> place to store metadata of the document
+<meta> defines the metadata of the document
+<title> title of the document
+<body> contents of the document
+<h1>-<h6> create headings on the document of different sizes
+<p> create paragraphs
+<a> hyperlinks
+<button> create buttons
+<div> divide the HTML doc into sections
+<table> create a table
+<tr> defines rows
+<td> defines cells
+<input> defines a type of input control
+<form> for defining forms in HTML
+<li> list item
+<ol> ordered list
+<ul> unordered list
+<br> line break
+
+
+3. Describe the types of CSS selectors that you know
+
+.class {} applies CSS formatting to all elements within that class
+element {} applies CSS formatting to said element
+element.class {} applies CSS formatting to said element but only within the specified class
+:hover {} appies CSS formatting to the class/element when the user hovers over the item
+
+
+4. Explain how you would implement the checklist above.
+
+  First, I edited the base.html file to add bootstrap.
+
+  Then, I created an external CSS file in styles/css and began stylizing the login page. To do so, I created a container for all the contents (to allow myself to place it at the center of the page), then I created another class to customize the login card. I modified the HTML table slightly to erase the columns. I made it so the login card only contained the title, username and password forms, the login button, and the create account hyperlink. This was to achieve a cleaner look. I modified the font style for headings, the background-color of the container and cards, the widths, as well as the transitions for the hover feature. When hovering over the card, I implemented a box-shadow. When hovering over the input forms, login button, and register link, I changed the colors accordingly. I did so by accessing the .class, element.class and :hover selectors.
+  
+  For the register form, I re-used the container for the login page, but I created a new register card. This was because I needed to display more information, and thus altered the width of the card to accommodate the information I needed to show. Due to the fact that the register page used the default UserCreationForm from django, I was not able to customize the contents. However, I did customize the create button, and re-used the login button CSS classes.
+  
+  Since the create-task form is very similar to the login form, I simply reused the login classes in the create-task HTML file. This meant that I didn't need to create any CSS customization.
+  
+  The process of creating the todolist was similar, but I modified the HTML file quite a bit. Since each task needed to have its own individual card, I removed the table tags. I created a container outside the for-loop, and then I created another class within the for-loop. This meant that I was able to customize each card individually, but also how they appeared within the container. I made it so multiple cards could appear in one row, but I enabled flex-wrap to allow it to wrap around to another row if more space is needed.
