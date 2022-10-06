@@ -90,32 +90,54 @@ Heroku Link: https://pbp-nicole-assignment3.herokuapp.com/todolist
 2. Describe the HTML5 tags that you know
 
 `<!DOCTYPE>` a declaration of the document type
+
 `<html>` the root of the html document
+
 `<head>` place to store metadata of the document
+
 `<meta>` defines the metadata of the document
+
 `<title>` title of the document
+
 `<body>` contents of the document
+
 `<h1>-<h6>` create headings on the document of different sizes
+
 `<p>` create paragraphs
+
 `<a>` hyperlinks
+
 `<button>` create buttons
+
 `<div>` divide the HTML doc into sections
+
 `<table>` create a table
+
 `<tr>` defines rows
+
 `<td>` defines cells
+
 `<input>` defines a type of input control
+
 `<form>` for defining forms in HTML
+
 `<li>` list item
+
 `<ol>` ordered list
+
 `<ul>` unordered list
+
 `<br>` line break
 
 
 3. Describe the types of CSS selectors that you know
 
 .class {} applies CSS formatting to all elements within that class
+
 element {} applies CSS formatting to said element
+
 element.class {} applies CSS formatting to said element but only within the specified class
+
 :hover {} appies CSS formatting to the class/element when the user hovers over the item
 
 
