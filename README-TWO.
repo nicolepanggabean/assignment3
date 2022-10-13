@@ -1,0 +1,20 @@
+# Assignment 6
+
+1. Describe the difference between asynchronous programming with synchronous programming
+
+Synchronous programming refers to the interaction between a client and server that are interdependent. This means that a server waits until a client makes a request before working on a response, and a client waits for the response before making a new request. However, with asynchronous progamming, no waiting is needed. A client can make a request and continue to do more work while waiting for the response.
+
+
+2. When implementing Javascript and AJAX, there is an application in the paradigms of Event-Driven Programming. Describe the reasoning for those paradigms and state some examples of its application.
+
+Event-driven programming refers to the running of a program when an event occurs. In this case, the event would be when the user submits information for a new task for the to-do list. As a result, this "event" triggers code for AJAX POST, which receives the information, formats it, then redisplays it.
+
+
+3. Describe the implementation of asynchronous programming in AJAX.
+
+AJAX, on its own, is already able to send and retrieve data from servers asynchronously ([source](https://www.nerd.vision/post/ajax-the-asynchronous-programming-paradigm-for-the-asynchronous-mind)). This means that no refreshing is required when changes occur.
+
+
+4. Explain how you would implement the checklist above.
+
+First, add javascript and jquery scripts in base.html, then add the javascript code in the required HTML file. I also created a new function to display all the todolist data in json form. Using .get(), retrieve the data from the json file, and add the corresponding HTML formatting. Then, display it.
