@@ -2,13 +2,14 @@ import datetime
 from http.client import INTERNAL_SERVER_ERROR
 from django.shortcuts import render
 from todolist.models import Task
-from django.http import HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.core import serializers
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -69,3 +70,12 @@ def new_task(request):
             messages.info(request, 'Make sure you provide a title and description!')
     
     return render(request, 'create-task.html')
+
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@login_required(login_url='/todolist/login/')
+def show_ajax(request):
+    return render(request, "todolist_ajax.html")
